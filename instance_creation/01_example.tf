@@ -5,6 +5,7 @@ provider "aws" {
 resource "aws_instance" "web" {
   ami           = "ami-0427dccbe06f9c360"
   instance_type = "t2.micro"
+  vpc_security_group_ids = [aws_security_group.allow_ssh.id]
 
   tags = {
     Name = "terraform_ec2_instance"
