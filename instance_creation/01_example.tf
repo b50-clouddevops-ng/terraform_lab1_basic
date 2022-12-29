@@ -7,7 +7,7 @@ resource "aws_instance" "web" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "tf_ec2_instance"
+    Name = "terraform_ec2_instance"
   }
 }
 
